@@ -5,9 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean id="beanTemplate" abstract="true">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hi!"/>
+    </bean>
+
     <bean id="helloWorld" class="com.assir.yassine.HelloWorld" scope="singleton"
-          init-method="init" destroy-method="destroy">
-        <property name="message" value="Hello World!"/>
+          init-method="init" destroy-method="destroy" parent="beanTemplate">
+        <property name="message1" value="Hello World overridden!"/>
+        <property name="message" value="Hello World added!"/>
     </bean>
 
     <bean class="com.assir.yassine.InitHelloWorld"/>

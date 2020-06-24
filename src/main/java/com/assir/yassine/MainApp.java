@@ -9,6 +9,9 @@ public class MainApp {
 
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
         obj.getMessage();
+        obj.getMessage1();
+        obj.getMessage2();
+
         context.registerShutdownHook();
     }
 }
