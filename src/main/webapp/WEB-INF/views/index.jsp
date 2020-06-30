@@ -1,16 +1,21 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: assir
-  Date: 30/06/2020
-  Time: 09:35
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Spring Page Redirection</title>
 </head>
 <body>
-$END$
+    <h2>Spring Page Redirection</h2>
+    <p>Click below button to redirect the result to new page</p>
+
+    <form:form method="get" action="/SpringExample/redirect">
+        <table>
+            <tr>
+                <td>
+                    <input type = "submit" value = "Redirect Page"/>
+                </td>
+            </tr>
+        </table>
+    </form:form>
 </body>
 </html>
