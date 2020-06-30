@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>Student information</h2>
-    <form:form method="post" action="/SpringExample_war/addStudent">
+    <form:form method="post" action="/SpringExample/addStudent">
         <table>
             <tr>
                 <td><form:label path="name">Name</form:label></td>
