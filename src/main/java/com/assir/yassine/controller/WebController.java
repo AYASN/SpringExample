@@ -21,4 +21,9 @@ public class WebController {
     public String finalPage() {
         return "final";
     }
+
+    @RequestMapping(value = "/staticPage", method = RequestMethod.GET)
+    public String staticRedirect() {
+        return "redirect:/pages/final.htm";
+    }
 }
